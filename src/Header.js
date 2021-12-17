@@ -5,10 +5,10 @@ function Header() {
     
     return (
         <div className="header">
-            <nav class="navbar navbar-dark bg-dark">
-                <div class="container-fluid">
-                    <a class="nav-brand text-white" href="./">
-                        <div class="fullCircle">
+            <nav className="navbar navbar-dark bg-dark">
+                <div className="container-fluid">
+                    <a className="nav-brand text-white" href="./">
+                        <div className="fullCircle">
                         </div>
                     </a>
                 </div>

@@ -4,9 +4,9 @@ function Footer() {
     
     return (
         <div className="footer">
-            <nav class="navbar navbar-dark bg-dark">
-                <div class="container-fluid">
-                    <a class="nav-brand text-white" href="./">
+            <nav className="navbar navbar-dark bg-dark">
+                <div className="container-fluid">
+                    <a className="nav-brand text-white" href="./">
                         imgFooter
                     </a>
                     <div className="text-white">
