@@ -3,15 +3,17 @@ import React, { useState } from "react"
 function InputForm(props) {
 
     /*
-    Props:
-    List
+    Props from TaskList:
+        addTask()
     */
     const [input, setInput] = useState("");
 
+    // Updates functional state to keep track of user input
     const handleChange = (event) => {
         setInput(event.target.value);
     }
 
+    // Passes user input to parent component and creates a new task
     const handleSubmit = (event) => {
         event.preventDefault();
 

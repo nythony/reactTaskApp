@@ -9,6 +9,7 @@ function TaskList() {
         console.log(JSON.stringify(list))
     })
 
+    // Takes in a new task object {id: (int), text: (string)} and adds to list
     const addTask = (task) => {
         if (task.text !== "") {
             const newList = [task, ...list]
