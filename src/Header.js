@@ -8,7 +8,8 @@ function Header() {
             <nav class="navbar navbar-dark bg-dark">
                 <div class="container-fluid">
                     <a class="nav-brand text-white" href="./">
-                        img
+                        <div class="fullCircle">
+                        </div>
                     </a>
                 </div>
             </nav>
