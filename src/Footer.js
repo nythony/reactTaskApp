@@ -1,21 +1,22 @@
 import React, { useState } from "react"
 
-function Header() {
-
+function Footer() {
     
     return (
-        <div className="header">
+        <div className="footer">
             <nav class="navbar navbar-dark bg-dark">
                 <div class="container-fluid">
                     <a class="nav-brand text-white" href="./">
-                        img
+                        imgFooter
                     </a>
+                    <div className="text-white">
+                        {(new Date().getFullYear())} - Alina Chaiyasarikul
+                    </div>
                 </div>
             </nav>
-
         </div>
     )
 
 }
 
-export default Header
+export default Footer
