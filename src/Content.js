@@ -19,9 +19,6 @@ function Content(props) {
                 ? <CompleteList view={props.view} list={list} setList={setList}/>
                 : <TaskList view={props.view} list={list} setList={setList}/>
             }
-            {/* <TaskList 
-                view={view}
-            /> */}
         </div>
     )
 

@@ -9,10 +9,31 @@ function HeaderMenu(props) {
     
     return (
         <div className="headerMenu d-flex justify-content-between">
-            <span onClick={()=>props.setView("home")}>HOME</span>
-            <span onClick={()=>props.setView("incomplete")}>TASK LIST</span>
-            <span onClick={()=>props.setView("complete")}>COMPLETED LIST</span>
-            <span onClick={()=>props.setView("about")}>ABOUT</span>
+            
+            <span 
+                className={props.view === "home" ? "active" : null} 
+                onClick={()=>props.setView("home")}>
+                HOME
+            </span>
+
+            <span 
+                className={props.view === "incomplete" ? "active": null}
+                onClick={()=>props.setView("incomplete")}>
+                TASK LIST
+            </span>
+
+            <span 
+                className={props.view === "complete" ? "active": null}
+                onClick={()=>props.setView("complete")}>
+                COMPLETED LIST
+            </span>
+
+            <span 
+                className={props.view === "about" ? "active": null}
+                onClick={()=>props.setView("about")}>
+                ABOUT
+            </span>
+
         </div>
     )
 

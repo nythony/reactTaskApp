@@ -11151,5 +11151,8 @@ body {
   margin-right: 2vw;
   cursor: pointer;
 }
+.headerMenu span.active {
+  color: #44D7B6;
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -18,6 +18,7 @@ function App() {
                       </div>
                   </a>
                   <HeaderMenu 
+                    view={view}
                     setView={setView}
                   />
               </div>
