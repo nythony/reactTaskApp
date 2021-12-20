@@ -1,14 +1,9 @@
 import React, { useEffect, useState } from "react"
 
 function HeaderMenu(props) {
-
-    // useEffect(() => {    // Update the document title using the browser API    
-    //     document.title = `You clicked ${count} times`;  
-    // });
-
     
     return (
-        <div className="headerMenu d-flex justify-content-between">
+        <div className="headerMenu">
             
             <span 
                 className={props.view === "home" ? "active" : null} 
