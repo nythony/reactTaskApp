@@ -11178,4 +11178,8 @@ body h2, body .h2 {
   overflow-y: scroll;
 }
 
+.taskText {
+  max-width: 90%;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -55,7 +55,12 @@ body {
   background-color: transparent;
 }
 
+// Custom
 .taskList {
   max-height: 40vh;
   overflow-y: scroll;
+}
+
+.taskText {
+  max-width: 90%;
 }

@@ -27,7 +27,7 @@ function InputForm(props) {
     }
     
     return (
-        <div className="card bg-primary bg-opacity-50 text-white">
+        <div className="card bg-primary bg-opacity-50">
             <div className="card-header">
                 <h2 className="card-text text-center text-dark">Task List</h2>
                     <form className="todo-form" onSubmit={handleSubmit}>
@@ -52,7 +52,6 @@ function InputForm(props) {
                         </div>
                     </form>
             </div>
-
         </div>
     )
 }
