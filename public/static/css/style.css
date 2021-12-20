@@ -11179,7 +11179,11 @@ body h2, body .h2 {
 }
 
 .taskText {
-  max-width: 90%;
+  max-width: 80%;
+}
+
+.taskIcons span {
+  padding: 0.2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

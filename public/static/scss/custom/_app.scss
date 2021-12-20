@@ -62,5 +62,11 @@ body {
 }
 
 .taskText {
-  max-width: 90%;
+  max-width: 80%;
+}
+
+.taskIcons {
+  span {
+    padding: 0.2rem;
+  }
 }

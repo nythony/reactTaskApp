@@ -20,7 +20,8 @@ function InputForm(props) {
         props.addTask({
             id: Math.floor(Math.random() * 10000),
             text: input.trim(),
-            isCompleted: false
+            isCompleted: false,
+            edit: false
         })
         
         setInput('');

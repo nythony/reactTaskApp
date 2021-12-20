@@ -23,6 +23,42 @@ function TaskList(props) {
         props.setList(newList)
     }
 
+    // Replaces display of text with input field for editing
+    function editTask(event) {
+        let taskId = event.target.parentElement.parentElement.id
+        const newList = props.list.filter( (task) => {
+            if (task.id == taskId) {
+                task.edit = true
+            }
+            return task
+        })
+        props.setList(newList)
+    }
+
+    // Overwrite task text
+    function changeTask(event) {
+        let taskId = event.target.parentElement.parentElement.id
+        const newList = props.list.filter( (task) => {
+            if (task.id == taskId) {
+                task.text= event.target.value
+            }
+            return task
+        })
+        props.setList(newList)
+    }
+
+    // Saves value of input field to task
+    function saveTask(event) {
+        let taskId = event.target.parentElement.parentElement.id
+        const newList = props.list.filter( (task) => {
+            if (task.id == taskId) {
+                task.edit = false
+            }
+            return task
+        })
+        props.setList(newList)
+    }
+
     // Deletes the task from the list of tasks
     function deleteTask(event) {
         let taskId = event.target.parentElement.parentElement.id
@@ -47,22 +83,41 @@ function TaskList(props) {
                             return !task.isCompleted
                         }) 
                             ? props.list.map( (value, index) => {
-                                return !value.isCompleted ?
-                                    <li 
+                                return !value.isCompleted 
+                                    ? <li 
                                         key={index} 
                                         id={value.id} 
                                         className="list-group-item taskItem d-flex justify-content-between">
-                                        <div className="taskText">{value.text}</div>
-                                        <div className="taskIcons">
-                                            <span 
-                                                className="fas fa-check"
-                                                onClick={(event)=>{completeTask(event)}}>
-                                            </span>
-                                            <span 
-                                                className="fas fa-trash"
-                                                onClick={(event)=>{deleteTask(event)}}>
-                                            </span>
+                                        <div className="taskText">
+                                            {value.edit 
+                                                ? <input 
+                                                    type="text"
+                                                    className="form-control"
+                                                    value={value.text}
+                                                    onChange={(event)=> changeTask(event)}/>
+                                                : value.text}
                                         </div>
+                                        {value.edit 
+                                            ? <div className="taskIcons">
+                                                <span 
+                                                    className="fas fa-save"
+                                                    onClick={(event)=>saveTask(event)}>
+                                                </span>
+                                            </div>
+                                            : <div className="taskIcons">
+                                                <span 
+                                                    className="fas fa-check"
+                                                    onClick={(event)=>{completeTask(event)}}>
+                                                </span>
+                                                <span 
+                                                    className="fas fa-pencil-alt"
+                                                    onClick={(event)=>{editTask(event)}}>
+                                                </span>
+                                                <span 
+                                                    className="fas fa-trash"
+                                                    onClick={(event)=>{deleteTask(event)}}>
+                                                </span>
+                                            </div>}
                                     </li>
                                     : null
                             }) 
