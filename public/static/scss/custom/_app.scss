@@ -19,3 +19,10 @@ body {
   border-radius: 50%;
   background-color: $primary;
 }
+
+.headerMenu {
+  span {
+    margin-right: 2vw;
+    cursor: pointer;
+  }
+}

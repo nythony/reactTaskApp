@@ -11147,4 +11147,9 @@ body {
   background-color: #44D7B6;
 }
 
+.headerMenu span {
+  margin-right: 2vw;
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=style.css.map */

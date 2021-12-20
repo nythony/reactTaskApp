@@ -5,12 +5,9 @@ function Footer() {
     return (
         <div className="footer">
             <nav className="navbar navbar-dark bg-dark">
-                <div className="container-fluid">
-                    <a className="nav-brand text-white" href="./">
-                        imgFooter
-                    </a>
+                <div className="container-fluid justify-content-end">
                     <div className="text-white">
-                        {(new Date().getFullYear())} - Alina Chaiyasarikul
+                        &copy; {(new Date().getFullYear())} - Alina Chaiyasarikul
                     </div>
                 </div>
             </nav>
