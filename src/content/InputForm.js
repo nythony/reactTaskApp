@@ -6,6 +6,7 @@ function InputForm(props) {
     Props from TaskList:
         addTask()
     */
+   
     const [input, setInput] = useState("");
 
     // Updates functional state to keep track of user input

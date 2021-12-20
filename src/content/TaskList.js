@@ -1,7 +1,20 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import InputForm from "./InputForm.js"
 
+/*
+ Suppress warnings:
+ - Intentionally using non-strict equality for class IDs and numerical IDs
+ - Only comparing numerical values programmatically assigned
+*/ 
+/* eslint-disable */
+
 function TaskList(props) {
+
+    /*
+    Props from Content:
+        list()
+        setList()
+    */
 
     // Takes in a new task object {id: (int), text: (string)} and adds to list
     const addTask = (task) => {
@@ -40,7 +53,7 @@ function TaskList(props) {
         let taskId = event.target.parentElement.parentElement.id
         const newList = props.list.filter( (task) => {
             if (task.id == taskId) {
-                task.text= event.target.value
+                task.text = event.target.value
             }
             return task
         })
@@ -52,6 +65,10 @@ function TaskList(props) {
         let taskId = event.target.parentElement.parentElement.id
         const newList = props.list.filter( (task) => {
             if (task.id == taskId) {
+                task.text = task.text.trim()
+                if (task.text === "") {
+                    return null
+                }
                 task.edit = false
             }
             return task
@@ -66,6 +83,7 @@ function TaskList(props) {
             if (task.id != taskId) {
                 return task
             }
+            return null
         })
         props.setList(newList)
     }
@@ -90,11 +108,12 @@ function TaskList(props) {
                                         className="list-group-item taskItem d-flex justify-content-between">
                                         <div className="taskText">
                                             {value.edit 
-                                                ? <input 
+                                                ? <textarea 
                                                     type="text"
                                                     className="form-control"
                                                     value={value.text}
-                                                    onChange={(event)=> changeTask(event)}/>
+                                                    onChange={(event)=> changeTask(event)}>
+                                                </textarea>
                                                 : value.text}
                                         </div>
                                         {value.edit 

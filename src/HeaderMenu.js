@@ -1,7 +1,13 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 
 function HeaderMenu(props) {
     
+    /*
+    Props from App:
+        view
+        setView()
+    */
+
     return (
         <div className="headerMenu">
             

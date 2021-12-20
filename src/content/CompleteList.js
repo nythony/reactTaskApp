@@ -1,7 +1,13 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 
 function CompleteList(props) {
-    
+
+    /*
+    Props from Content:
+        list()
+        setList()
+    */
+
     return(
         <div className="container d-flex flex-column col col-lg-6 justify-content-center">
 

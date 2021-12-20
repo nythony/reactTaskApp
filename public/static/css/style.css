@@ -10,6 +10,7 @@
  * Variables
  */
 /* Bootstrap Overrides */
+/* Colors */
 /* Import Remaining Core Bootstrap */
 /* Import Optional Boostrap */
 :root {
@@ -11130,6 +11131,7 @@ textarea.form-control-lg {
  * Variables
  */
 /* Bootstrap Overrides */
+/* Colors */
 /* Body */
 body {
   height: 100vh;
@@ -11137,6 +11139,10 @@ body {
 }
 body h2, body .h2 {
   font-size: 1.5rem;
+}
+
+a, .linkTitle {
+  color: #339c85;
 }
 
 /* Header */
@@ -11169,6 +11175,11 @@ body h2, body .h2 {
 }
 
 /* Content */
+.visitPage {
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
 .list-group-item {
   background-color: transparent;
 }
@@ -11179,11 +11190,12 @@ body h2, body .h2 {
 }
 
 .taskText {
-  max-width: 80%;
+  max-width: 75%;
 }
 
 .taskIcons span {
   padding: 0.2rem;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

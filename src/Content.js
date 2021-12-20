@@ -7,6 +7,12 @@ import LandingPage from "./content/LandingPage.js"
 
 function Content(props) {
 
+    /*
+    Props from App:
+        view
+        setView()
+    */
+
     const [list, setList] = useState([]);
 
     return (
@@ -16,8 +22,8 @@ function Content(props) {
                 : props.view === "about" 
                 ? <About /> 
                 : props.view === "complete" 
-                ? <CompleteList view={props.view} list={list} setList={setList}/>
-                : <TaskList view={props.view} list={list} setList={setList}/>
+                ? <CompleteList list={list} setList={setList}/>
+                : <TaskList list={list} setList={setList}/>
             }
         </div>
     )

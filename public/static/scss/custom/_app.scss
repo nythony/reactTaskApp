@@ -10,10 +10,13 @@ body {
     }
 }
 
+a, .linkTitle {
+  color: $primary-dark;
+}
+
 /* Header */
 
 // Custom
-
 .fullCircle
 {
   width: 50px;
@@ -50,6 +53,16 @@ body {
 
 /* Content */
 
+//// Home Page
+
+// Custom
+.visitPage {
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
+//// Tasks
+
 // Bootstrap Overrides
 .list-group-item {
   background-color: transparent;
@@ -62,11 +75,12 @@ body {
 }
 
 .taskText {
-  max-width: 80%;
+  max-width: 75%;
 }
 
 .taskIcons {
   span {
     padding: 0.2rem;
+    cursor: pointer;
   }
 }
