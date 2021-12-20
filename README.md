@@ -1,5 +1,4 @@
 # React Coding Exercise for STR
-Author: Alina Chaiyasarikul
 
 ## Available Scripts
 
