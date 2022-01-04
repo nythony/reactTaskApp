@@ -1,0 +1,86 @@
+/* Imports */
+@import "./variables";
+
+/* Body */
+body {
+    height: 100vh;
+    background-color: $gray-200;
+    h2 {
+      font-size: 1.5rem;
+    }
+}
+
+a, .linkTitle {
+  color: $primary-dark;
+}
+
+/* Header */
+
+// Custom
+.fullCircle
+{
+  width: 50px;
+  height: 50px;
+  border: 1px solid;
+  border-radius: 50%;
+  background-color: $primary;
+}
+
+@include media-breakpoint-down(sm) {
+  .headerMenu {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .headerMenu {
+    font-size: 0.7rem;
+    margin-top: 1rem;
+  }
+}
+
+.headerMenu {
+  span {
+    margin-right: 1rem;
+    cursor: pointer;
+
+    &.active {
+      color: $primary;
+    }
+  }
+}
+
+/* Content */
+
+//// Home Page
+
+// Custom
+.visitPage {
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
+//// Tasks
+
+// Bootstrap Overrides
+.list-group-item {
+  background-color: transparent;
+}
+
+// Custom
+.taskList {
+  max-height: 40vh;
+  overflow-y: scroll;
+}
+
+.taskText {
+  max-width: 75%;
+}
+
+.taskIcons {
+  span {
+    padding: 0.2rem;
+    cursor: pointer;
+  }
+}
